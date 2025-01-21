@@ -1,0 +1,20 @@
+#write graphql schema here
+type Query {
+    getAllBooks: [Book]
+}
+
+type Book {
+    id: ID
+    title: String
+    author: String
+    publisher: String!
+    publishedDate: String!
+    description: String
+    isbn: String
+    category: String
+}
+
+type Mutation {
+    addBook(title: String!, author: String, publisher: String, publishedDate: String, description: String, isbn: String, category: String): Book
+}
+
